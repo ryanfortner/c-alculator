@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define VER "0.0.3"
 #define CALC_MAJOR 0
 #define CALC_MINOR 0
 #define CALC_REVISION 3
@@ -13,12 +14,21 @@ void help(char *argv0) {
 //using argv[2][0] or *argv[2] is the same
 int main (int argc, char **argv)
 {
+    // if --help or others are passed, print help() dialog
     if(argc>1) {
 		if(!strcasecmp(argv[1], "--help")||!strcasecmp(argv[1], "-h")||!strcasecmp(argv[1], "-v")||!strcasecmp(argv[1], "--version")) {
 			help(argv[0]);
 			return 0;
 		}
 	}
+
+    // if no input passed
+    if (argc < 2) {
+        help();
+        return 0;
+    }
+
+    // if 4 args passed
     int arg1, arg2;
     if (argc == 4)
     {
