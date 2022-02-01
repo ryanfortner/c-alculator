@@ -12,7 +12,7 @@ void help(char *argv0) {
 int main (int argc, char **argv)
 {
     if(argc>1) {
-		if(!strcasecmp(argv[1], "--help")||!strcasecmp(argv[1], "-h")||!strcasecmp(argv[1], "-v"))||!strcasecmp(argv[1], "--version") {
+		if(!strcasecmp(argv[1], "--help")||!strcasecmp(argv[1], "-h")||!strcasecmp(argv[1], "-v")||!strcasecmp(argv[1], "--version")) {
 			help(argv[0]);
 			return 0;
 		}
