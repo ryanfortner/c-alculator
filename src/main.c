@@ -1,11 +1,10 @@
 #include <stdio.h>
-#define PROGEXECNAME "./c-alculator"
 #define VER "0.0.1"
 #define NAME "c-alculator"
 
-void help() {
+void help(char *argv0) {
 	printf("\e[1m%s version %s built on %s.\e[0m\n", NAME, VER, __TIMESTAMP__);
-	printf("\e[Usage:\e[0m %s [num1] [operation] [num2]\n", PROGEXECNAME);
+	printf("\e[Usage:\e[0m %s [num1] [operation] [num2]\n", argv0);
 	printf("\e[Operations:\e[0m +, -, x, /.  x=*\n");
 }
 
@@ -14,7 +13,7 @@ int main (int argc, char **argv)
 {
     if(argc>1) {
 		if(!strcasecmp(argv[1], "--help")||!strcasecmp(argv[1], "-h")) {
-			help();
+			help(argv[0]);
 			return 0;
 		}
 	}
