@@ -24,7 +24,7 @@ int main (int argc, char **argv)
 
     // if no input passed
     if (argc < 2) {
-        help();
+    	help(argv[0]);
         return 0;
     }
 
