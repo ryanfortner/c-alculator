@@ -1,5 +1,7 @@
 #include <stdio.h>
-#define VER "0.0.3"
+#define CALC_MAJOR 0
+#define CALC_MINOR 0
+#define CALC_REVISION 3
 #define NAME "c-alculator"
 
 void help(char *argv0) {
