@@ -4,8 +4,8 @@
 
 void help(char *argv0) {
 	printf("\e[1m%s version %s built on %s.\e[0m\n", NAME, VER, __TIMESTAMP__);
-	printf("\e[Usage:\e[0m %s [num1] [operation] [num2]\n", argv0);
-	printf("\e[Operations:\e[0m +, -, x, /.  x=*\n");
+	printf("Usage: %s [num1] [operation] [num2]\n", argv0);
+	printf("Operations: +, -, x, /\n");
 }
 
 //using argv[2][0] or *argv[2] is the same
