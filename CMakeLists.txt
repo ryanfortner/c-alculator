@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(c-alculator VERSION 0.0.4)
+project(c-alculator VERSION 0.1.0)
 
 add_executable(c-alculator src/main.c)
 
