@@ -24,14 +24,14 @@ jobs:
             apt install make cmake build-essential git dpkg-dev -y &&
             cd /github/workspace &&
             git clone https://github.com/ryanfortner/c-alculator &&
-            cd ./pi-apps-cli &&
+            cd ./c-alculator &&
             mkdir build && cd build &&
             cmake .. &&
             make &&
             make package &&
             mv ./*.deb ../../ &&
             cd ../../ &&
-            rm -rf pi-apps-cli"
+            rm -rf c-alculator"
       - uses: docker://multiarch/ubuntu-core:armhf-bionic
         with:
           args: >
@@ -40,7 +40,7 @@ jobs:
             apt install make cmake build-essential git dpkg-dev -y &&
             cd /github/workspace &&
             git clone https://github.com/ryanfortner/c-alculator &&
-            cd ./pi-apps-cli &&
+            cd ./c-alculator &&
             mkdir build && cd build &&
             cmake .. &&
             make &&
