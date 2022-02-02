@@ -16,3 +16,9 @@ make
 ```
 sudo rm /usr/local/bin/c-alculator
 ```
+
+### EXPERIMENTAL: Building a deb: 
+First follow the compile steps (don't run `sudo make install` though), this will generate a .deb package in the current directory
+```
+make package
+```
